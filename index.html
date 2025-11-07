@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Batanes NGL | The Green Paradise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Banner Section -->
+    <div id="bannerSection" class="banner-section position-relative">
+        <div class="banner-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+        <!-- Header ABSOLUTE CENTER -->
+        <div class="banner-title-container position-absolute top-50 start-50 translate-middle text-center w-100"
+            style="z-index:2;">
+            <h1 class="banner-title text-white fw-bold formal-header">
+                <span class="ngl-main">NGL</span><span class="batanes-hide"> | BATANES</span>
+            </h1>
+            <p class="banner-subtitle text-white mt-4">The Green Paradise of the North</p>
+        </div>
+
+        <!-- Static Thumbnails Row at Bottom Right -->
+        <div class="banner-thumbnails position-absolute">
+            <div class="d-flex gap-3">
+                <div class="thumbnail-container">
+                    <img src="images/02.jpg" alt="Thumb 1" class="banner-thumb rounded-4 shadow">
+                    <div class="thumbnail-overlay"></div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="images/03.jpg" alt="Thumb 2" class="banner-thumb rounded-4 shadow">
+                    <div class="thumbnail-overlay"></div>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="images/04.png" alt="Thumb 3" class="banner-thumb rounded-4 shadow">
+                    <div class="thumbnail-overlay"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Explore Button not too bottom, but left -->
+        <div class="banner-explore-btn position-absolute">
+            <button id="exploreBtn" class="btn btn-lg explore-button rounded-pill px-5 fw-bold shadow">
+                <span>EXPLORE NOW</span>
+                <i class="fas fa-arrow-right ms-2"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Homepage Section (Initially hidden) -->
+    <div id="mainHomeSection" class="d-none vh-100 d-flex flex-column main-home-section">
+        <!-- NGL Batanes Header - Left Aligned -->
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-primary formal-header" style="font-size: 2.5rem; font-weight: 700;">
+                        <i class="fas fa-leaf me-3"></i>NGL | BATANES
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slideshow Section -->
+        <div class="container-fluid flex-grow-1 d-flex align-items-center justify-content-center px-4">
+            <div class="row w-100 justify-content-center">
+                <div class="col-12 col-lg-10 col-xl-8">
+                    <div id="carouselExampleCaptions" class="carousel slide w-100">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner rounded-4 shadow-lg ratio ratio-16x9">
+                            <div class="carousel-item active">
+                                <img src="images/01.jpg" class="d-block w-100 carousel-image" alt="Batanes Landscape 1">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Batanes: The Green Paradise</h5>
+                                    <p>Known for its rolling hills, stone houses, and breathtaking seascapes, Batanes
+                                        offers a peaceful escape and untouched natural beauty.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/02.jpg" class="d-block w-100 carousel-image" alt="Batanes Landscape 2">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Tukon Church</h5>
+                                    <p>Also known as the Mt. Carmel Chapel, Tukon Church sits atop a hill overlooking
+                                        Basco, offering a breathtaking view of Batanes' rolling landscapes and sea.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/04.png" class="d-block w-100 carousel-image" alt="Batanes Landscape 3">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Basco Lighthouse</h5>
+                                    <p>Standing proudly on Naidi Hills, the Basco Lighthouse offers a perfect view of
+                                        the West Philippine Sea — a symbol of guidance and peace in Batanes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Three Picture Sections Below Slideshow -->
+        <div class="container-fluid py-5">
+
+            <!-- Section 1: Image Left, Text Right -->
+            <div class="row align-items-center mb-5 py-5">
+                <div class="col-md-6">
+                    <div class="image-container">
+                        <img src="images/01.jpg" alt="Batanes Scene 1" class="img-fluid rounded-4 shadow-lg">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="content-wrapper">
+                        <h2 class="fw-bold poppins-bold mb-4">
+                            <i class="fas fa-mountain me-3"></i>The Enchanting Islands of Batanes
+                        </h2>
+                        <p class="poppins-regular fs-5 text-muted">
+                            Batanes, the northernmost province of the Philippines, is a haven of rolling hills, stone houses, and stunning coastlines. Its untouched beauty and serene atmosphere make it a perfect escape for travelers seeking peace and adventure.
+                        </p>
+                        <div class="mt-4">
+                            <span class="badge bg-success me-2 p-2">Nature</span>
+                            <span class="badge bg-success me-2 p-2">Islands</span>
+                            <span class="badge bg-success p-2">Adventure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Image Right, Text Left -->
+            <div class="row align-items-center mb-5 py-5">
+                <div class="col-md-6 order-md-2">
+                    <div class="image-container">
+                        <img src="images/03.jpg" alt="Batanes Scene 2" class="img-fluid rounded-4 shadow-lg">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="content-wrapper">
+                        <h2 class="fw-bold poppins-bold mb-4">
+                            <i class="fas fa-landmark me-3"></i>Timeless Architecture
+                        </h2>
+                        <p class="poppins-regular fs-5 text-muted">
+                            Batanes is home to the iconic stone houses and the beautiful Tukon Church — built to withstand storms while preserving the island's natural charm and rich Ivatan heritage.
+                        </p>
+                        <div class="mt-4">
+                            <span class="badge bg-success me-2 p-2">Architecture</span>
+                            <span class="badge bg-success me-2 p-2">Culture</span>
+                            <span class="badge bg-success p-2">Heritage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Image Left, Text Right -->
+            <div class="row align-items-center py-5">
+                <div class="col-md-6">
+                    <div class="image-container">
+                        <img src="images/04.png" alt="Batanes Scene 3" class="img-fluid rounded-4 shadow-lg">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="content-wrapper">
+                        <h2 class="fw-bold poppins-bold mb-4">
+                            <i class="fas fa-lightbulb me-3"></i>Guiding Lights of Heritage
+                        </h2>
+                        <p class="poppins-regular fs-5 text-muted">
+                            Like beacons cutting through the darkness, our cultural heritage illuminates the path forward. These timeless structures remind us of the generations who came before, their wisdom guiding us through turbulent waters.
+                        </p>
+                        <div class="mt-4">
+                            <span class="badge bg-success me-2 p-2">Lighthouses</span>
+                            <span class="badge bg-success me-2 p-2">History</span>
+                            <span class="badge bg-success p-2">Navigation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Back Button -->
+        <div class="text-center py-4">
+            <button id="backBtn" class="btn btn-outline-primary btn-lg mt-4">
+                <i class="fas fa-arrow-left me-2"></i>Back to Home
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

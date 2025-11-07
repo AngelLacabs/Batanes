@@ -1,0 +1,556 @@
+/* Enhanced Banner Section */
+:root {
+  --primary-green: #2e8b57;
+  --secondary-green: #3cb371;
+  --light-green: #90ee90;
+  --dark-green: #1e5631;
+  --accent-yellow: #ffd166;
+  --text-dark: #2a2a2a;
+  --text-light: #f8f9fa;
+}
+
+/* CHANGED: Green background for entire banner section */
+.banner-section {
+  height: 100vh;
+  min-height: 500px;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%), 
+              url('images/01.jpg') center center/cover no-repeat;
+  background-blend-mode: overlay;
+  transition: all 0.8s ease;
+  position: relative;
+}
+
+/* REMOVED or MODIFIED the overlay */
+.banner-overlay {
+  /* You can remove this entirely or keep it for additional effects */
+  background: transparent;
+  z-index: 1;
+  transition: all 0.8s ease;
+  pointer-events: none;
+}
+
+.banner-title {
+  font-size: 5.5rem;
+  text-shadow: 0 4px 32px rgba(0,0,0,.8);
+  letter-spacing: 3px;
+  font-family: 'Poppins', Arial, sans-serif !important;
+  margin-bottom: 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: visible;
+  white-space: nowrap;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.banner-subtitle {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  font-weight: 400;
+  text-shadow: 0 2px 10px rgba(0,0,0,.5);
+  animation: fadeIn 1.5s ease 1s both;
+  margin-top: 1rem;
+}
+
+.banner-title .ngl-main {
+  display: inline-block;
+  min-width: 110px;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateX(0);
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.banner-title .batanes-hide {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  margin-left: 15px;
+  color: var(--accent-yellow);
+  text-shadow: 0 0 15px rgba(255,209,102,0.4);
+}
+
+.banner-title:hover .ngl-main,
+.banner-title:focus .ngl-main {
+  transform: translateX(-15px);
+  text-shadow: 0 0 25px rgba(255,255,255,0.5);
+}
+
+.banner-title:hover .batanes-hide,
+.banner-title:focus .batanes-hide {
+  transform: translateX(-15px);
+  opacity: 1;
+  text-shadow: 0 0 20px rgba(255,209,102,0.6);
+}
+
+/* Enhanced Thumbnails */
+.banner-thumbnails {
+  right: 2.5rem;
+  bottom: 5.5rem;
+  animation: fadeInUp 1s ease 0.5s both;
+  z-index: 3;
+}
+
+.thumbnail-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.thumbnail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(46, 139, 87, 0.3) 100%);
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.banner-thumb {
+  width: 120px;
+  height: 85px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  filter: brightness(0.9);
+  border: 2px solid transparent;
+}
+
+.thumbnail-container:hover .banner-thumb {
+  transform: translateY(-5px) scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  border: 2px solid rgba(255,255,255,0.8);
+}
+
+.thumbnail-container:hover .thumbnail-overlay {
+  opacity: 0.3;
+}
+
+/* Enhanced Explore Button */
+.banner-explore-btn {
+  left: 2.5rem;
+  bottom: 7.5rem;
+  animation: fadeInUp 1s ease 0.8s both;
+  z-index: 3;
+}
+
+.explore-button {
+  background: linear-gradient(135deg, var(--accent-yellow) 0%, #ffb347 100%);
+  border: none;
+  color: var(--text-dark);
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 12px 35px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(255,209,102,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.explore-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255,209,102,0.6);
+  background: linear-gradient(135deg, #ffdc8a 0%, #ffc266 100%);
+  color: var(--text-dark);
+}
+
+.explore-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(255,209,102,0.4);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  z-index: 3;
+}
+
+.scroll-line {
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--accent-yellow) 0%, transparent 100%);
+  margin: 0 auto;
+  animation: scrollPulse 2s infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+
+/* Enhanced Main Home Section */
+.main-home-section {
+  background: linear-gradient(135deg, #f5f9f7 0%, #e8f4ec 100%);
+  padding: 2rem 0;
+  animation: fadeIn 1s ease;
+}
+
+/* REMOVED the separate green header background since it's now in the banner */
+
+/* Enhanced Carousel */
+.carousel-inner.ratio-16x9 {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 3px solid white;
+}
+
+.carousel-inner.ratio-16x9:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item.active .carousel-image {
+  transform: scale(1.03);
+}
+
+.carousel-caption {
+  background: linear-gradient(to top, rgba(30, 86, 49, 0.9) 0%, rgba(46, 139, 87, 0.6) 100%);
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 2.5rem 2rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  width: 100%;
+  max-width: none;
+  text-align: left;
+  animation: fadeInUp 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 45%;
+}
+
+.carousel-caption h5 {
+  color: var(--accent-yellow);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .carousel-caption {
+    border-radius: 0 0 0.5rem 0.5rem;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    height: auto;
+    padding: 1.2rem 1.2rem;
+  }
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 6px;
+  background-color: rgba(255,255,255,0.5);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  background-color: #fff;
+  transform: scale(1.2);
+  border: 2px solid var(--primary-green);
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(46, 139, 87, 0.7);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: rgba(30, 86, 49, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Enhanced Three Sections */
+.container-fluid {
+  max-width: 1200px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(46, 139, 87, 0.2) 0%, rgba(144, 238, 144, 0.1) 100%);
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.img-fluid {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 1rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.image-container:hover .img-fluid {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.row.align-items-center {
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.row.align-items-center:last-child {
+  border-bottom: none;
+}
+
+.content-wrapper {
+  padding: 0 2rem;
+}
+
+.row.align-items-center h2 {
+  color: var(--text-dark);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.row.align-items-center h2 i {
+  color: var(--primary-green);
+}
+
+.row.align-items-center p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.badge {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Enhanced Back Button */
+#backBtn {
+  border: 2px solid var(--primary-green);
+  color: var(--primary-green);
+  padding: 10px 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#backBtn:hover {
+  background-color: var(--primary-green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+}
+
+#backBtn:active {
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Enhanced Formal Header */
+.formal-header {
+  position: relative;
+  display: inline-block;
+}
+
+/* Enhanced Left Aligned Header */
+.container-fluid .formal-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-left: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.container-fluid .formal-header i {
+  color: var(--primary-green);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-1 {
+    font-size: 3rem;
+  }
+  
+  .container-fluid {
+    padding: 0 1rem;
+  }
+  
+  .img-fluid {
+    height: 300px;
+    margin-bottom: 2rem;
+  }
+  
+  .row.align-items-center {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .order-md-1, .order-md-2 {
+    order: 0 !important;
+  }
+  
+  .carousel-caption {
+    bottom: 1rem;
+    left: 1rem;
+    max-width: 80%;
+    padding: 1rem;
+  }
+  
+  .banner-title {
+    font-size: 3.5rem;
+  }
+  
+  .banner-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .banner-thumb {
+    width: 90px;
+    height: 65px;
+  }
+  
+  .banner-thumbnails {
+    right: 1.5rem;
+    bottom: 4.5rem;
+  }
+  
+  .banner-explore-btn {
+    left: 1.5rem;
+    bottom: 6.5rem;
+  }
+  
+  .content-wrapper {
+    padding: 0 1rem;
+  }
+  
+  .container-fluid .formal-header {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    text-align: center;
+  }
+}
+/* Fix content sections positioning and background */
+.row.align-items-center {
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background: white;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.content-wrapper {
+  padding: 2rem;
+}
+
+.row.align-items-center h2 {
+  color: var(--text-dark);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.row.align-items-center p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Adjust image containers */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.img-fluid {
+  height: 350px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 1rem;
+  transition: all 0.4s ease;
+}
+
+/* Badges styling */
+.badge {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Remove extra padding from container */
+.container-fluid.py-5 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
